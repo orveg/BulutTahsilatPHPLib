@@ -6,10 +6,10 @@
  */
 const url = "http://portal.buluttahsilat.com/WebService/WSBankPaymentService.asmx?wsdl";
 
-const userName = "PERDIGITALENTG";
-const password = "QNL292";
-const firmAPICode = "A6F489C15FCA49C683479D83750F2A41";
-const FirmCode = "1009";
+const userName = "*****";
+const password = "*****";
+const firmAPICode = "******";
+const FirmCode = "*****";
 
 const BankPaymentList = "BankPaymentList";
 const UpdatePayment = "UpdatePaymentStatusInfo";
