@@ -1,4 +1,4 @@
-<h1>BULUT TAHSİLAT SİSTEMİ PHP KÜTÜPHANESİ</h1>
+<h2>BULUT TAHSİLAT SİSTEMİ PHP KÜTÜPHANESİ</h2>
 <h3>Genel Ayarlar</h3>
 
 <p>WSBankPaymentService.php içindeki sabitleri size verilen bilgiler ile değiştirmelisiniz. <p>
