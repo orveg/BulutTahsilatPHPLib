@@ -6,10 +6,10 @@
  */
 const url = "http://portal.buluttahsilat.com/WebService/WSBankPaymentService.asmx?wsdl";
 
-const userName = "*****";
-const password = "*****";
-const firmAPICode = "*****";
-const FirmCode = "****";
+const userName = "PERDIGITALENTG";
+const password = "QNL292";
+const firmAPICode = "A6F489C15FCA49C683479D83750F2A41";
+const FirmCode = "1009";
 
 const BankPaymentList = "BankPaymentList";
 const UpdatePayment = "UpdatePaymentStatusInfo";
@@ -46,7 +46,7 @@ class WSBankPaymentService
         /**
          * Fonksiyonlardaki tutarsızlıktan böyle yapıldı
          */
-        if($func = "BankPaymentList") {
+        if($func == "BankPaymentList") {
             $result = $this->args[$func] = array('userName' => $this->username,
                 'password' => $this->password,
                 'firmCode' => $this->firmAPICode);
@@ -95,8 +95,8 @@ class WSBankPaymentService
      */
     public function SubFirmList()
     {
-        $this->args[SubFirmList] = $this->setApiUser(SubFirmList);
 
+        $this->args[SubFirmList] = $this->setApiUser(SubFirmList);
         $result = $this->client->__call(SubFirmList, $this->args);
         echo json_encode($result);
 
@@ -109,9 +109,9 @@ class WSBankPaymentService
      */
     public function SubFirmAddNew($params = array())
     {
-        $user = $this->setApiUser(SubFirmAddNew);
 
-        $this->args[SubFirmAddNew] = array_merge($user, $params['sf']);
+        $user = $this->setApiUser(SubFirmAddNew);
+        $this->args[SubFirmAddNew] = array_merge($user, $params);
         $result = $this->client->__call(SubFirmAddNew, $this->args);
         echo json_encode($result);
 
