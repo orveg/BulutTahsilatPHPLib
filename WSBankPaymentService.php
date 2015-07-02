@@ -70,9 +70,7 @@ class WSBankPaymentService
     {
 
         $user = $this->setApiUser(BankPaymentList);
-
         $this->args[BankPaymentList] = array_merge($user, $params);
-
         $result = $this->client->__call(BankPaymentList, $this->args);
         echo json_encode($result);
     }
